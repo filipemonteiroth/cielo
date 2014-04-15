@@ -18,6 +18,7 @@ module Cielo
       params.each do |key, value| 
         str_params+="&" unless str_params.empty?
         str_params+="#{key}=#{value}"
+        puts "req #{str_params}"
       end
       @http.request_post(self.environment::WS_PATH, str_params)
     end
