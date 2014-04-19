@@ -114,7 +114,7 @@ module Cielo
       parameters.merge!(:produto => "1") unless parameters[:produto]
       parameters.merge!(:parcelas => "1") unless parameters[:parcelas]
       parameters.merge!(:autorizar => "2") unless parameters[:autorizar]
-      parameters.merge!(:capturar => "true") unless parameters[:capturar]
+      parameters.merge!(:capturar => "false") unless parameters[:capturar]
       parameters.merge!(:"url-retorno" => Cielo.return_path) unless parameters[:"url-retorno"]
       parameters.merge!(:cartao_indicador => '1') unless parameters[:cartao_indicador] && buy_page == :buy_page_store
       parameters.merge!(:"gerar-token" => false) unless parameters[:"gerar-token"]
